@@ -19,7 +19,6 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can set
   // useful metadata like html lang here.
@@ -42,6 +41,9 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themeConfig: {
     // Replace with your project's social card
